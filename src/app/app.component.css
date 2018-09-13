@@ -1,0 +1,88 @@
+
+main {    
+    position: relative;
+    width: 340px;
+    height: 300px;
+	border: 1px dotted gray;
+	border-radius: 5%;
+	text-align: center;
+	margin: 0px;
+}
+
+.countdown-number {
+	font-size: 38px;
+	color: #db4646;
+}
+
+.word {
+	top: 5px;
+    height: 20%;    
+    background-color: #ffffff;
+    border-radius: 20%;
+    justify-content: center;  
+	margin: auto; 
+	font-size: 58px; 
+}
+
+.center {
+    top: 20px;
+    margin: 10px;    
+}
+
+.result {
+	font-size:22px;
+	color: #2f6627;
+}
+
+
+button {
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border: none;
+	outline: none;
+	display:inline-block;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:22px;
+	padding:16px 31px;
+	text-decoration:none;
+    width: 120px;
+    text-align: center;
+}
+
+button[name="btnVerdadeiro"] {
+	background-color:#45b4c7;
+	color:#ffffff;
+    text-shadow:0px 1px 0px #256dd9;
+}
+
+button[name="btnVerdadeiro"]:hover {
+	background-color:#2a89bd;
+}
+
+button[name="btnFalso"] {
+	background-color:#e65757;
+	color:#ffffff;
+    text-shadow:0px 1px 0px #e62e2e;
+}
+
+button[name="btnFalso"]:hover {
+	background-color:#db4646;
+}
+
+button[name="btnStart"] {
+	background-color:#44c767;
+	border:1px solid #18ab29;
+	color:#ffffff;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.bottom {
+	position: relative;
+}
