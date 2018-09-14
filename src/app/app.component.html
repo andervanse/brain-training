@@ -9,16 +9,18 @@
   <br/>
   <div class="center">
     <button *ngIf="!isBntStartVisible" name="btnVerdadeiro" (click)="onTrue()">V</button>
-
     <button *ngIf="!isBntStartVisible" name="btnFalso" (click)="onFalse()">F</button>
 
     <div *ngIf="isBntStartVisible" class="bottom">
       <button name="btnStart" (click)="onStart()">Iniciar</button>
-      <p class="result">
-        Acertos: {{ getTotalCorrect() }} | Erros: {{ getTotalWrong() }}
-      </p>
     </div>
   </div>
-
-
 </main>
+
+<div>
+  <ul>
+    <li *ngFor="let score of getScores()">
+      Level: {{ score.level }} - Acertos {{ score.qttRight }} - Erros {{ score.qttMistakes }}
+    </li>
+  </ul>
+</div>
