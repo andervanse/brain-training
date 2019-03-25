@@ -25,6 +25,8 @@ export class AppComponent implements OnInit {
                  private scoreService :ScoreService) { }
 
     ngOnInit(): void {
+        this.countdownNumber = 0;
+        this.randomName =  { index: -1, name: ' . ' };
         this.isBntStartVisible = true;
         this.countdownService.tick.subscribe(tickNumber => this.countdownNumber = tickNumber);
         this.countdownService.finish.subscribe(tickNumber => {

@@ -3,7 +3,7 @@
     <p class="countdown-number">{{ countdownNumber }}</p>
   </div>
   <div>
-    <p *ngIf="!isBntStartVisible" class="word" [ngStyle]="{'color': randomColor?.color}">{{ randomName?.name }}</p>
+    <p class="word" [ngStyle]="{'color': randomColor?.color}">{{ randomName?.name }}</p>
   </div>
   <br/>
   <br/>
@@ -20,7 +20,7 @@
 <div>
   <ul>
     <li *ngFor="let score of getScores()">
-      Level: {{ score.level }} - Acertos {{ score.qttRight }} - Erros {{ score.qttMistakes }}
+      <b>{{ score.level }}</b>.  Acertos {{ score.qttRight }} - Erros {{ score.qttMistakes }}
     </li>
   </ul>
 </div>
