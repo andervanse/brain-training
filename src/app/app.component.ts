@@ -38,16 +38,26 @@ export class AppComponent implements OnInit {
         });
     }
 
-    private getRandomInt(max) {
+    private getRandomIndex(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
 
+    private getRandomBoolean() {
+        return Math.random() >= 0.5;
+    }
     private generateRandom() {
         const colors = this.colorsService.getColors();
-        let rColorIdx = this.getRandomInt(colors.length);
-        let rNameIdx = this.getRandomInt(colors.length);
-        this.randomColor = { index: rColorIdx, color: colors[rColorIdx] };
-        this.randomName = { index: rNameIdx, name: colors[rNameIdx] };
+        let rColorIndex = this.getRandomIndex(colors.length);
+        let rNameIndex = 0;
+
+        if (this.getRandomBoolean()) {
+            rNameIndex = rColorIndex;
+        } else {
+            rNameIndex = this.getRandomIndex(colors.length);
+        }
+
+        this.randomColor = { index: rColorIndex, color: colors[rColorIndex] };
+        this.randomName = { index: rNameIndex, name: colors[rNameIndex] };
     }
 
     onStart() {
